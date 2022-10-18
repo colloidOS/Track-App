@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Track_AppApp: App {
+   @StateObject var TransactionListVM = TransactionListViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(TransactionListVM)
         }
     }
 }
